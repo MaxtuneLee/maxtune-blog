@@ -36,7 +36,7 @@ description: "串行通讯是只用两条线直接进行数据传输的通讯方
 
 <figure>
 
-[![](@assets/images/1682322731-image.png)](https://mxte.cc/?attachment_id=344)
+[![](/assets/images/1682322731-image.png)](https://mxte.cc/?attachment_id=344)
 
 <figcaption>
 
@@ -66,7 +66,7 @@ STM32串口通信接口有两种，分别是：UART(通用异步收发器)、USA
 
 <figure>
 
-[![](@assets/images/1682322413-image.png)](https://mxte.cc/?attachment_id=343)
+[![](/assets/images/1682322413-image.png)](https://mxte.cc/?attachment_id=343)
 
 <figcaption>
 

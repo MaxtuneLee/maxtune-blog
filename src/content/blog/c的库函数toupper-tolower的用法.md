@@ -50,4 +50,4 @@ int main()
 
 最后就是输出了
 
-[![](@assets/images/1631289919-image.png)](https://mxte.cc/?attachment_id=132)
+[![](/assets/images/1631289919-image.png)](https://mxte.cc/?attachment_id=132)

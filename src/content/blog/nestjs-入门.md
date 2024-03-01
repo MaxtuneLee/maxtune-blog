@@ -23,7 +23,7 @@ npm i -g @nestjs/cli
 nest new projectname
 ```
 
-[![](@assets/images/1657099957-image.png)](https://mxte.cc/?attachment_id=314)
+[![](/assets/images/1657099957-image.png)](https://mxte.cc/?attachment_id=314)
 
 稍等一段时间就安装好了
 
@@ -31,7 +31,7 @@ nest new projectname
 
 ### 目录结构
 
-[![](@assets/images/1657101203-image.png)](https://mxte.cc/?attachment_id=315)
+[![](/assets/images/1657101203-image.png)](https://mxte.cc/?attachment_id=315)
 
 ```bash
 src
@@ -44,7 +44,7 @@ src
 
 ### Module
 
-[![](@assets/images/1657101425-image.png)](https://mxte.cc/?attachment_id=316)
+[![](/assets/images/1657101425-image.png)](https://mxte.cc/?attachment_id=316)
 
 Module 是一个用 `@Module()` 注释的类， `@Module()` 提供了 Nest 组织应用结构的元数据。每一个应用的至少有一个 Module 一个根 Module ，根模块是 Nest 用来构建应用程序结构的起点。Module 的作用是再程序运行的时候给模块处理依赖。对于大多数应用程序，最终的架构将采用多个 Module ，每个 Module 都封装了一组密切相关的功能。
 
@@ -52,7 +52,7 @@ Module 是一个用 `@Module()` 注释的类， `@Module()` 提供了 Nest 组�
 
 Controllers 负责处理传入的请求并向客户返回响应。
 
-[![](@assets/images/1657101947-image.png)](https://mxte.cc/?attachment_id=317)
+[![](/assets/images/1657101947-image.png)](https://mxte.cc/?attachment_id=317)
 
 一个 Controller 的目的是接收应用程序的特定请求。Router 控制哪个 Controller 接收哪些请求。通常，每个 Controller 有一个以上的 Router，不同的 Router 可以执行不同的动作。
 
@@ -60,7 +60,7 @@ Controllers 负责处理传入的请求并向客户返回响应。
 
 ### Provider
 
-![](@assets/images/Components1.png)
+![](/assets/images/Components1.png)
 
 Provider是Nest的一个基本概念。许多基本的Nest类都可以被当作Provider--services, repositories, factories, helpers等等。Provider的主要思想是它可以注入依赖关系；这意味着对象可以相互建立各种关系。service 是真正处理业务逻辑的地方，所有的业务逻辑都会在这里处理。它可经过 module 引用其他模块的service，也可经过 module 暴露出去。
 
@@ -87,7 +87,7 @@ nest g module test
 
 <figure>
 
-[![](@assets/images/1657103941-image-1024x283.png)](https://mxte.cc/?attachment_id=318)
+[![](/assets/images/1657103941-image-1024x283.png)](https://mxte.cc/?attachment_id=318)
 
 <figcaption>
 
@@ -99,7 +99,7 @@ nest g module test
 
 <figure>
 
-[![](@assets/images/1657103966-image.png)](https://mxte.cc/?attachment_id=319)
+[![](/assets/images/1657103966-image.png)](https://mxte.cc/?attachment_id=319)
 
 <figcaption>
 
@@ -111,7 +111,7 @@ nest g module test
 
 <figure>
 
-[![](@assets/images/1657103994-image.png)](https://mxte.cc/?attachment_id=320)
+[![](/assets/images/1657103994-image.png)](https://mxte.cc/?attachment_id=320)
 
 <figcaption>
 
@@ -154,7 +154,7 @@ export class TestController {
 
 尝试一下请求 http://localhost:3000/test/check，看到返回 Test return successfully~
 
-[![](@assets/images/1657104842-image.png)](https://mxte.cc/?attachment_id=321)
+[![](/assets/images/1657104842-image.png)](https://mxte.cc/?attachment_id=321)
 
 ## 请求处理
 
@@ -234,7 +234,7 @@ postcheck(@Body() Test: TestDto) {
 
 ### 管道
 
-[![](@assets/images/1657200748-image.png)](https://mxte.cc/?attachment_id=326)
+[![](/assets/images/1657200748-image.png)](https://mxte.cc/?attachment_id=326)
 
 管道一般会有两个用处
 
@@ -283,7 +283,7 @@ export class SearchService {
 
 别忘了需要在app.module.ts中的Providers上添加上SearchService
 
-[![](@assets/images/1657203786-image.png)](https://mxte.cc/?attachment_id=327)
+[![](/assets/images/1657203786-image.png)](https://mxte.cc/?attachment_id=327)
 
 然后回到controller，添加一个新的Get请求
 
@@ -296,7 +296,7 @@ export class SearchService {
 
 oh对了，别忘了在constructor中添加上searchService引入
 
-[![](@assets/images/1657203880-image.png)](https://mxte.cc/?attachment_id=328)
+[![](/assets/images/1657203880-image.png)](https://mxte.cc/?attachment_id=328)
 
 那么现在尝试请求`curl -X GET -d"name=Maxtune" http://localhost:3000/test/search?uid=1` 看到返回`{"username":"Maxtune","uid":1}` 说明成功啦
 

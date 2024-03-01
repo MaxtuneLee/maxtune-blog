@@ -45,7 +45,7 @@ Docker 技术的核心概念分别是
 
 假设我们已经完成了 Go 项目编写
 
-[![](@assets/images/1650686231-image-1024x635.png)](https://mxte.cc/?attachment_id=271)
+[![](/assets/images/1650686231-image-1024x635.png)](https://mxte.cc/?attachment_id=271)
 
 ### 创建 Docker Image
 
@@ -147,47 +147,47 @@ docker build . -t maxtunelee/message_board
 
 先新建一个制品仓库
 
-[![](@assets/images/1650687214-image-1024x620.png)](https://mxte.cc/?attachment_id=272)
+[![](/assets/images/1650687214-image-1024x620.png)](https://mxte.cc/?attachment_id=272)
 
 选择 Docker 并填写相关信息
 
-[![](@assets/images/1650687322-image-1024x620.png)](https://mxte.cc/?attachment_id=273)
+[![](/assets/images/1650687322-image-1024x620.png)](https://mxte.cc/?attachment_id=273)
 
 选择仓库管理
 
-[![](@assets/images/1650687357-image-1024x620.png)](https://mxte.cc/?attachment_id=274)
+[![](/assets/images/1650687357-image-1024x620.png)](https://mxte.cc/?attachment_id=274)
 
 选择你刚刚创建的仓库并打开操作指引
 
-[![](@assets/images/1650687387-image-1024x620.png)](https://mxte.cc/?attachment_id=275)
+[![](/assets/images/1650687387-image-1024x620.png)](https://mxte.cc/?attachment_id=275)
 
 填写密码并生成个人令牌复制到终端
 
-[![](@assets/images/1650687669-image-1024x703.png)](https://mxte.cc/?attachment_id=277)
+[![](/assets/images/1650687669-image-1024x703.png)](https://mxte.cc/?attachment_id=277)
 
-[![](@assets/images/1650687769-image-1024x134.png)](https://mxte.cc/?attachment_id=278)
+[![](/assets/images/1650687769-image-1024x134.png)](https://mxte.cc/?attachment_id=278)
 
 回到coding，选择推送并填写相关信息，复制命令到terminal
 
-[![](@assets/images/1650687906-image-1024x703.png)](https://mxte.cc/?attachment_id=279)
+[![](/assets/images/1650687906-image-1024x703.png)](https://mxte.cc/?attachment_id=279)
 
 执行完成后我们再看coding的仓库，已经有镜像
 
-[![](@assets/images/1650688007-image-1024x703.png)](https://mxte.cc/?attachment_id=280)
+[![](/assets/images/1650688007-image-1024x703.png)](https://mxte.cc/?attachment_id=280)
 
 再次打开操作指引，选择拉取并填写相关信息
 
-[![](@assets/images/1650688170-image-1024x621.png)](https://mxte.cc/?attachment_id=281)
+[![](/assets/images/1650688170-image-1024x621.png)](https://mxte.cc/?attachment_id=281)
 
 通过ssh登录vps，执行拉取命令
 
 当拉取会显示pull complete
 
-[![](@assets/images/1650688411-image-1024x282.png)](https://mxte.cc/?attachment_id=284)
+[![](/assets/images/1650688411-image-1024x282.png)](https://mxte.cc/?attachment_id=284)
 
 使用 `docker images` 命令查看可以看到刚刚pull新的镜像已经存在
 
-[![](@assets/images/1650688373-image-1024x89.png)](https://mxte.cc/?attachment_id=283)
+[![](/assets/images/1650688373-image-1024x89.png)](https://mxte.cc/?attachment_id=283)
 
 ### docker run 运行镜像
 
@@ -235,11 +235,11 @@ docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
 
 `docker run -itd -p 14514:14514 b301`
 
-[![](@assets/images/1700571339-image.png)](https://mxte.cc/270.html/1700571339-image)
+[![](/assets/images/1700571339-image.png)](https://mxte.cc/270.html/1700571339-image)
 
 使用apifox调试一下
 
-[![](@assets/images/1650688704-image-1024x640.png)](https://mxte.cc/?attachment_id=287)
+[![](/assets/images/1650688704-image-1024x640.png)](https://mxte.cc/?attachment_id=287)
 
 已经在需要的端口运行啦～
 

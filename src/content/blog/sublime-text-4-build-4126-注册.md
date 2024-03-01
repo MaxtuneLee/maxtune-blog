@@ -14,7 +14,7 @@ description: "最近用vscode时候发现了卡顿、打开关闭都很缓慢之
 
 ↓ 居然支持deno，这让我很惊喜
 
-[![](@assets/images/1651547362-image-1024x689.png)](https://mxte.cc/289.html/1651547362-image)
+[![](/assets/images/1651547362-image-1024x689.png)](https://mxte.cc/289.html/1651547362-image)
 
 ## 1.修改host
 
