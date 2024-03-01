@@ -56,7 +56,7 @@ const layoutProps = {
         ><path
           d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
         ></path>
-      </svg><span>Go back</span>
+      </svg><span>返回</span>
     </button>
   </div>
   <main id="main-content">
@@ -87,7 +87,7 @@ const layoutProps = {
             d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
           ></path>
         </svg>
-        <span>Back to Top</span>
+        <span>回到顶部</span>
       </button>
 
       <ShareLinks />
@@ -125,7 +125,7 @@ const layoutProps = {
   /** Attaches copy buttons to code blocks in the document,
    * allowing users to copy code easily. */
   function attachCopyButtons() {
-    let copyButtonLabel = "Copy";
+    let copyButtonLabel = "复制";
     let codeBlocks = Array.from(document.querySelectorAll("pre"));
 
     for (let codeBlock of codeBlocks) {
@@ -155,7 +155,7 @@ const layoutProps = {
       await navigator.clipboard.writeText(text);
 
       // visual feedback that task is completed
-      button.innerText = "Copied";
+      button.innerText = "已复制";
 
       setTimeout(() => {
         button.innerText = copyButtonLabel;

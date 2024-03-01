@@ -54,17 +54,19 @@ module.exports = {
         transparent: "transparent",
       },
       fontFamily: {
-        mono: ["IBM Plex Mono", "monospace"],
+        mono: ["Noto Sans SC", "JetBrains Mono", "monospace"],
       },
 
       typography: {
         DEFAULT: {
           css: {
             pre: {
-              color: false,
+              color: true,
+              fontFamily: "JetBrains Mono"
             },
             code: {
-              color: false,
+              color: true,
+              fontFamily: "JetBrains Mono"
             },
           },
         },

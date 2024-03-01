@@ -27,7 +27,7 @@ export default defineConfig({
       ],
     ],
     shikiConfig: {
-      theme: "one-dark-pro",
+      theme: "rose-pine",
       wrap: true,
     },
   },
