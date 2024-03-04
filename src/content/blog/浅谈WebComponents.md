@@ -1,6 +1,7 @@
 ---
 title: "浅谈 Web Components"
-pubDatetime: 2024-04-04T10:58:18+08:00
+pubDatetime: 2024-04-03T10:58:18+08:00
+modDatetime: 2024-04-03T20:01:18+08:00
 featured: true
 categories:
   - "前端"
@@ -8,7 +9,6 @@ tags:
   - "Lit"
   - "Web Component"
   - "前端框架"
-coverImage: "1635315359-image.png"
 description: "Web Component 是一套技术方案，它可以允许你创建可重复利用的自定义元素，在 web 应用中以一个自定义标签的形式引入。最近觉得前端技术栈变得越来越复杂，所以想看点纯粹的东西，Web Component 在很久之前就有所耳闻，但是一直没有深入去了解过，因为当时目光都在当红的框架 React 和 Vue 上。经过这次一番搜索，让我对 Web Component 有了很大的改观，原来它已经不经意间遍布了我们日常访问的 Web 应用，并带来一些优秀的性能提升。"
 ---
 

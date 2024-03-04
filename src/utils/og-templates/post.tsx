@@ -11,6 +11,7 @@ export default (post: CollectionEntry<"blog">) => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        fontFamily: "sans-serif",
       }}
     >
       <div
@@ -58,6 +59,7 @@ export default (post: CollectionEntry<"blog">) => {
               fontWeight: "bold",
               maxHeight: "84%",
               overflow: "hidden",
+              fontFamily: "sans-serif !important",
             }}
           >
             {post.data.title}

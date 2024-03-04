@@ -36,13 +36,13 @@ title: "关于我"
 虽然只列了一些，其实我乐意尝试新的技术，比如说更多的框架像Lit、Solid等（React本体一年比一年颓废啊）
 
 <div class='flex gap-1 flex-wrap *:m-0'>
-  <img src="https://img.shields.io/badge/-JavaScript-f6da1c?style=flat&logo=javascript&logoColor=white">
-  <img src="https://img.shields.io/badge/-TypeScript-2b6dbf?style=flat&logo=typescript&logoColor=white">
-  <img src="https://img.shields.io/badge/-React-00b4ce?style=flat&logo=react&logoColor=white">
-  <img src="https://img.shields.io/badge/-Node.js-3C873A?style=flat&logo=Node.js&logoColor=white">
-  <img src="https://img.shields.io/badge/-Next.js-000?style=flat&logo=Next.js&logoColor=white">
-  <img src="https://img.shields.io/badge/-Sass-d6188d?style=flat&logo=Sass&logoColor=white">
-  <img src="https://img.shields.io/badge/-Nest.js-d6182e?style=flat&logo=Nest.js&logoColor=white">
+  <img alt='icon' src="https://img.shields.io/badge/-JavaScript-f6da1c?style=flat&logo=javascript&logoColor=white">
+  <img alt='icon' src="https://img.shields.io/badge/-TypeScript-2b6dbf?style=flat&logo=typescript&logoColor=white">
+  <img alt='icon' src="https://img.shields.io/badge/-React-00b4ce?style=flat&logo=react&logoColor=white">
+  <img alt='icon' src="https://img.shields.io/badge/-Node.js-3C873A?style=flat&logo=Node.js&logoColor=white">
+  <img alt='icon' src="https://img.shields.io/badge/-Next.js-000?style=flat&logo=Next.js&logoColor=white">
+  <img alt='icon' src="https://img.shields.io/badge/-Sass-d6188d?style=flat&logo=Sass&logoColor=white">
+  <img alt='icon' src="https://img.shields.io/badge/-Nest.js-d6182e?style=flat&logo=Nest.js&logoColor=white">
 </div>
 
 ### 机器视觉
@@ -50,10 +50,10 @@ title: "关于我"
 毕竟是智科专业，学不能白上了，还是要懂一些，除此以外还有一些电子与传统控制的技能（学的比较粗，只是会用）
 
 <div class='flex gap-1 flex-wrap *:m-0'>
-  <img src="https://img.shields.io/badge/-Matlab-f6da1c?style=flat&logo=Matlab&logoColor=white">
-  <img src="https://img.shields.io/badge/-Python-0d3fd6?style=flat&logo=Python&logoColor=white">
-  <img src="https://img.shields.io/badge/-Pytorch-e68510?style=flat&logo=Pytorch&logoColor=white">
-  <img src="https://img.shields.io/badge/-opencv-000?style=flat&logo=opencv&logoColor=white">
+  <img alt='icon' src="https://img.shields.io/badge/-Matlab-f6da1c?style=flat&logo=Matlab&logoColor=white">
+  <img alt='icon' src="https://img.shields.io/badge/-Python-0d3fd6?style=flat&logo=Python&logoColor=white">
+  <img alt='icon' src="https://img.shields.io/badge/-Pytorch-e68510?style=flat&logo=Pytorch&logoColor=white">
+  <img alt='icon' src="https://img.shields.io/badge/-opencv-000?style=flat&logo=opencv&logoColor=white">
 </div>
 
 ## 联系方式
