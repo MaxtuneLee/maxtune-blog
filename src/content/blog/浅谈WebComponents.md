@@ -1,6 +1,7 @@
 ---
 title: "浅谈 Web Components"
 pubDatetime: 2024-04-04T10:58:18+08:00
+featured: true
 categories:
   - "前端"
 tags:
