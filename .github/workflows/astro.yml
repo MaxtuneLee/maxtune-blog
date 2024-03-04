@@ -52,36 +52,55 @@ jobs:
         run: |
           pnpm build
         working-directory: ${{ env.BUILD_PATH }}
-      - name: FTP Deploy
+      - name: FTP/SFTP file deployer
         # You may pin to the exact commit or the version.
-        # uses: SamKirkland/FTP-Deploy-Action@8e83cea8672e3fbcbb9fdafff34debf6ae4c5f65
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        # uses: milanmk/actions-file-deployer@c1baf767551098897cadabc77c520a9be30dc916
+        uses: milanmk/actions-file-deployer@1.14
         with:
-          # ftp server
-          server: ${{secrets.SERVER_ADDRESS}}
-          # ftp username
-          username: ${{secrets.SERVER_USERNAME}}
-          # ftp password
-          password: ${{secrets.SERVER_PASSWORD}}
-          # Server port to connect to (read your web hosts docs)
-          port: 21
-          # protocol to deploy with - ftp, ftps, or ftps-legacy
-          protocol: ftps
-          # Folder to upload from, must end with trailing slash /
-          local-dir: ${{ env.BUILD_PATH }}/dist/
-          # Path to upload to on the server. Must end with trailing slash /
-          # server-dir: /
-          # Path and name of the state file - this file is used to track which files have been deployed
-          # state-name: # optional
-          # Prints which modifications will be made with current config options, but doesnt actually make any changes
-          # dry-run: # optional
-          # Deletes ALL contents of server-dir, even items in excluded with exclude argument
-          # dangerous-clean-slate: true
-          # An array of glob patterns, these files will not be included in the publish/delete process
-          # exclude: # optional
-          # How verbose should the information be - minimal, standard, or verbose
-          # log-level: # optional
-          # strict or loose
-          # security: # optional
-          # Timeout in milliseconds for FTP operations
-          # timeout: # optional
+          # Remote file transfer protocol (ftp, sftp)
+          remote-protocol: ftp
+          # Remote host
+          remote-host: ${{secrets.SERVER_ADDRESS}}
+          # Remote port
+          remote-port: 21
+          # FTP/SSH username
+          remote-user: ${{secrets.SERVER_USERNAME}}
+          # FTP/SSH password
+          remote-password: ${{secrets.SERVER_PASSWORD}}
+          # SSH private key of user
+          # ssh-private-key: # optional
+          # Enable proxy for FTP connection (true, false)
+          # proxy: 
+          # Proxy host
+          # proxy-host: # optional
+          # Proxy port
+          # proxy-port: # optional, default is 22
+          # Proxy forwarding port
+          # proxy-forwarding-port: # optional, default is 1080
+          # Proxy username
+          # proxy-user: # optional
+          # Proxy SSH private key of user
+          # proxy-private-key: # optional
+          # Local path to repository
+          local-path: ${{ env.BUILD_PATH }}/dist/
+          # Remote path on host
+          # remote-path: # default is .
+          # File synchronization (delta, full)
+          # sync: # default is delta
+          # Files to exclude from delta sync
+          # sync-delta-excludes: # optional
+          # # Additional command arguments for SSH client
+          # ssh-options: # optional
+          # # Additional command arguments for FTP client (lftp)
+          # ftp-options: # optional
+          # # Additional command arguments for mirroring (lftp)
+          # ftp-mirror-options: # optional
+          # # Additional ftp commands to run after synchronization (lftp)
+          # ftp-post-sync-commands: # optional
+          # # Send webhook event notifications
+          # webhook: # optional
+          # Upload logs to artifacts
+          artifacts: true
+          # Enable debug information (true, false)
+          debug: true
+                
