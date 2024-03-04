@@ -52,46 +52,36 @@ jobs:
         run: |
           pnpm build
         working-directory: ${{ env.BUILD_PATH }}
-      - name: FTP Mirror
+      - name: FTP Deploy
         # You may pin to the exact commit or the version.
-        # uses: modern-dev/ftp-mirror@700ec6b399f45cbd58572085856c6fe2114c8342
-        uses: modern-dev/ftp-mirror@v2
+        # uses: SamKirkland/FTP-Deploy-Action@8e83cea8672e3fbcbb9fdafff34debf6ae4c5f65
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          # FTP Server.
+          # ftp server
           server: ${{secrets.SERVER_ADDRESS}}
-          # FTP User.
-          user: ${{secrets.SERVER_USERNAME}}
-          # FTP Password.
+          # ftp username
+          username: ${{secrets.SERVER_USERNAME}}
+          # ftp password
           password: ${{secrets.SERVER_PASSWORD}}
-          # Local directory.
-          local_dir: ${{ env.BUILD_PATH }}/dist
-          # Remote directory.
-          remote_dir: /
-          # Delete all the files inside of the remote directory.
-          delete: true
-          # Exclude matching files.
-          # exclude: # optional, default is 
-          # Exclude matching files
-          # exclude_glob: # optional, default is 
-          # Times that the lftp will be executed if an error occurred.
-          # max_retries: # optional, default is 10
-          # Do not create symbolic links.
-          # no_symlinks: # optional, default is true
-          # FTP - Allow SSL encryption.
-          # ftp_ssl_allow: true
-          # FTP - FEAT: Determining what extended features the FTP server supports.
-          # ftp_use_feat: # optional, default is false
-          # FTP - Delay in seconds between NOOP commands when downloading tail of a file.
-          # ftp_nop_interval: # optional, default is 2
-          # NET - Maximum number of operation without success. 0 unlimited. 1 no retries.
-          # net_max_retries: # optional, default is 1
-          # NET - Ignore hard errors. When reply 5xx errors or there is too many users.
-          # net_persist_retries: # optional, default is 5
-          # NET - Sets the network protocol timeout.
-          # net_timeout: # optional, default is 15s
-          # DNS - 0 no limit trying to lookup an address otherwise try only this number of times.
-          # dns_max_retries: # optional, default is 8
-          # DNS - Time for DNS queries. Set to "never" to disable.
-          # dns_fatal_timeout: # optional, default is 10s
-                
-                      
+          # Server port to connect to (read your web hosts docs)
+          port: 21
+          # protocol to deploy with - ftp, ftps, or ftps-legacy
+          protocol: ftps
+          # Folder to upload from, must end with trailing slash /
+          local-dir: ${{ env.BUILD_PATH }}/dist
+          # Path to upload to on the server. Must end with trailing slash /
+          server-dir: /
+          # Path and name of the state file - this file is used to track which files have been deployed
+          # state-name: # optional
+          # Prints which modifications will be made with current config options, but doesnt actually make any changes
+          # dry-run: # optional
+          # Deletes ALL contents of server-dir, even items in excluded with exclude argument
+          dangerous-clean-slate: true
+          # An array of glob patterns, these files will not be included in the publish/delete process
+          # exclude: # optional
+          # How verbose should the information be - minimal, standard, or verbose
+          # log-level: # optional
+          # strict or loose
+          # security: # optional
+          # Timeout in milliseconds for FTP operations
+          # timeout: # optional
