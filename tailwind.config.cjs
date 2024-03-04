@@ -55,6 +55,7 @@ module.exports = {
       },
       fontFamily: {
         mono: ["Noto Sans SC", "JetBrains Mono", "monospace"],
+        // sans: ["Noto Sans SC", "sans-serif"],
       },
 
       typography: {
