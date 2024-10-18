@@ -58,5 +58,5 @@ jobs:
           server: ${{secrets.SERVER_ADDRESS}}
           username: ${{secrets.SERVER_USERNAME}}
           password: ${{ secrets.SERVER_PASSWORD }}
-          local-dir: ${{ env.BUILD_PATH }}/dist
+          local-dir: ${{ env.BUILD_PATH }}/dist/
                 
