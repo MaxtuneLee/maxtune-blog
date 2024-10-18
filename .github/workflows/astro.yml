@@ -86,7 +86,7 @@ jobs:
           # Remote path on host
           # remote-path: # default is .
           # File synchronization (delta, full)
-          # sync: # default is delta
+          sync: full # default is delta
           # Files to exclude from delta sync
           # sync-delta-excludes: # optional
           # # Additional command arguments for SSH client
