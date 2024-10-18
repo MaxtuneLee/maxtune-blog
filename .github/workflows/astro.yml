@@ -84,7 +84,7 @@ jobs:
           # Local path to repository
           local-path: ${{ env.BUILD_PATH }}/dist/
           # Remote path on host
-          # remote-path: # default is .
+          remote-path: ${{ secrets.SERVER_PATH }} # default is .
           # File synchronization (delta, full)
           sync: full # default is delta
           # Files to exclude from delta sync
