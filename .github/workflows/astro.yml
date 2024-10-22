@@ -22,7 +22,9 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
-    environment: Main-server
+    environment: 
+      name: Main-server
+      url: https://mxte.cc
     steps:
       - name: Checkout
         uses: actions/checkout@v4
