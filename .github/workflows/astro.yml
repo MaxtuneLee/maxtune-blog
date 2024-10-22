@@ -22,6 +22,7 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+    environment: Main-server
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -45,6 +46,22 @@ jobs:
         run: |
           [ -d maxtune-blog ] || mkdir maxtune-blog
           tar -xf maxtune-blog.tar -C maxtune-blog
+
+      - name: Upload artifact for deployment job
+        uses: actions/upload-artifact@v4
+        with:
+          name: maxtune-blog
+          path: ./maxtune-blog
+          
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Download artifact from build job
+        uses: actions/download-artifact@v4
+        with:
+          name: maxtune-blog
+          path: ./maxtune-blog
 
       - name: Copy Docker image to server
         uses: easingthemes/ssh-deploy@main
