@@ -126,10 +126,8 @@ const { activeNav } = Astro.props;
     @apply mx-auto flex max-w-3xl flex-col items-center justify-between sm:flex-row;
   }
   .top-nav-wrap {
-    /* display: grid; */
-    /* grid-template-rows: 0fr 0fr; */
     transition: all 0.5s allow-discrete ease-out;
-    @apply grid grid-rows-[0fr_0fr] relative w-full p-4 sm:items-center sm:py-8 overflow-hidden;
+    @apply relative grid w-full grid-rows-[0fr_0fr] sm:grid-rows-1 sm:grid-cols-2 overflow-hidden p-4 sm:items-center sm:py-8;
   }
   .logo {
     @apply py-1 text-xl font-semibold sm:static sm:text-2xl;
@@ -143,7 +141,7 @@ const { activeNav } = Astro.props;
 
   nav {
     min-height: 0px;
-    @apply w-full place-items-center sm:ml-2 sm:flex-row sm:justify-end sm:space-x-4 sm:py-0;
+    @apply md:place-items-end w-full flex-row place-items-center sm:justify-end sm:space-x-4 sm:py-0;
   }
 
   #top-nav-wrap.open {
