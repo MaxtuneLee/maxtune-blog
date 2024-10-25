@@ -1,5 +1,5 @@
 <script>
-  let theme = localStorage.getItem("theme");
+  let theme = document.firstElementChild?.getAttribute("data-theme");
   let giscusTheme = theme === "dark" ? "noborder_gray" : "light";
   let giscusAttributes = {
     src: "https://giscus.app/client.js",
