@@ -20,6 +20,7 @@ let themeValue = getPreferTheme();
 
 function setPreference() {
   localStorage.setItem("theme", themeValue);
+  updateGiscusTheme();
   reflectPreference();
 }
 
@@ -74,3 +75,16 @@ window
     themeValue = isDark ? "dark" : "light";
     setPreference();
   });
+
+function updateGiscusTheme() {
+  const iframe = document.querySelector("iframe.giscus-frame");
+  if (!iframe) return;
+  iframe.contentWindow.postMessage(
+    {
+      giscus: {
+        setConfig: { theme: themeValue === "dark" ? "noborder_gray" : "light" },
+      },
+    },
+    "https://giscus.app"
+  );
+}
