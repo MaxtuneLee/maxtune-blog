@@ -12,14 +12,14 @@ importers:
         specifier: ^0.4.1
         version: 0.4.1(prettier-plugin-astro@0.13.0)(prettier@3.2.4)(typescript@5.3.3)
       '@astrojs/rss':
-        specifier: ^4.0.2
+        specifier: ^4.0.3
         version: 4.0.3
       '@resvg/resvg-js':
         specifier: ^2.6.0
         version: 2.6.0
       astro:
         specifier: ^4.2.1
-        version: 4.2.4(@types/node@20.11.6)(typescript@5.3.3)
+        version: 4.2.4(@types/node@20.11.6)(lightningcss@1.23.0)(terser@5.27.0)(typescript@5.3.3)
       fuse.js:
         specifier: ^7.0.0
         version: 7.0.0
@@ -47,16 +47,16 @@ importers:
     devDependencies:
       '@astrojs/react':
         specifier: ^3.0.9
-        version: 3.0.9(@types/react-dom@18.2.18)(@types/react@18.2.48)(react-dom@18.2.0)(react@18.2.0)(vite@5.0.12)
+        version: 3.0.9(@types/react-dom@18.2.18)(@types/react@18.2.48)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(vite@5.0.12(@types/node@20.11.6)(lightningcss@1.23.0)(terser@5.27.0))
       '@astrojs/sitemap':
         specifier: ^3.0.5
         version: 3.0.5
       '@astrojs/tailwind':
         specifier: ^5.1.0
-        version: 5.1.0(astro@4.2.4)(tailwindcss@3.4.1)
+        version: 5.1.0(astro@4.2.4(@types/node@20.11.6)(lightningcss@1.23.0)(terser@5.27.0)(typescript@5.3.3))(tailwindcss@3.4.1)
       '@divriots/jampack':
         specifier: ^0.23.2
-        version: 0.23.2(react-dom@18.2.0)(react@18.2.0)
+        version: 0.23.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@tailwindcss/typography':
         specifier: ^0.5.10
         version: 0.5.10(tailwindcss@3.4.1)
@@ -3812,8 +3812,6 @@ snapshots:
       '@volar/typescript': 1.11.1
       fast-glob: 3.3.2
       muggle-string: 0.3.1
-      prettier: 3.2.4
-      prettier-plugin-astro: 0.13.0
       volar-service-css: 0.0.17(@volar/language-service@1.11.1)
       volar-service-emmet: 0.0.17(@volar/language-service@1.11.1)
       volar-service-html: 0.0.17(@volar/language-service@1.11.1)
@@ -3822,6 +3820,9 @@ snapshots:
       volar-service-typescript-twoslash-queries: 0.0.17(@volar/language-service@1.11.1)
       vscode-html-languageservice: 5.1.2
       vscode-uri: 3.0.8
+    optionalDependencies:
+      prettier: 3.2.4
+      prettier-plugin-astro: 0.13.0
     transitivePeerDependencies:
       - typescript
 
@@ -3848,11 +3849,11 @@ snapshots:
     dependencies:
       prismjs: 1.29.0
 
-  '@astrojs/react@3.0.9(@types/react-dom@18.2.18)(@types/react@18.2.48)(react-dom@18.2.0)(react@18.2.0)(vite@5.0.12)':
+  '@astrojs/react@3.0.9(@types/react-dom@18.2.18)(@types/react@18.2.48)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(vite@5.0.12(@types/node@20.11.6)(lightningcss@1.23.0)(terser@5.27.0))':
     dependencies:
       '@types/react': 18.2.48
       '@types/react-dom': 18.2.18
-      '@vitejs/plugin-react': 4.2.1(vite@5.0.12)
+      '@vitejs/plugin-react': 4.2.1(vite@5.0.12(@types/node@20.11.6)(lightningcss@1.23.0)(terser@5.27.0))
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       ultrahtml: 1.5.2
@@ -3870,9 +3871,9 @@ snapshots:
       sitemap: 7.1.1
       zod: 3.22.4
 
-  '@astrojs/tailwind@5.1.0(astro@4.2.4)(tailwindcss@3.4.1)':
+  '@astrojs/tailwind@5.1.0(astro@4.2.4(@types/node@20.11.6)(lightningcss@1.23.0)(terser@5.27.0)(typescript@5.3.3))(tailwindcss@3.4.1)':
     dependencies:
-      astro: 4.2.4(@types/node@20.11.6)(typescript@5.3.3)
+      astro: 4.2.4(@types/node@20.11.6)(lightningcss@1.23.0)(terser@5.27.0)(typescript@5.3.3)
       autoprefixer: 10.4.17(postcss@8.4.33)
       postcss: 8.4.33
       postcss-load-config: 4.0.2(postcss@8.4.33)
@@ -4064,7 +4065,7 @@ snapshots:
       '@commitlint/types': 18.4.4
       chalk: 4.1.2
       cosmiconfig: 8.3.6(typescript@5.3.3)
-      cosmiconfig-typescript-loader: 5.0.0(@types/node@20.11.6)(cosmiconfig@8.3.6)(typescript@5.3.3)
+      cosmiconfig-typescript-loader: 5.0.0(@types/node@20.11.6)(cosmiconfig@8.3.6(typescript@5.3.3))(typescript@5.3.3)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
@@ -4103,7 +4104,7 @@ snapshots:
       undici: 5.28.2
       whatwg-mimetype: 3.0.0
 
-  '@divriots/jampack@0.23.2(react-dom@18.2.0)(react@18.2.0)':
+  '@divriots/jampack@0.23.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@divriots/cheerio': 1.0.0-rc.12
       '@proload/core': 0.3.3
@@ -4122,7 +4123,7 @@ snapshots:
       lightningcss: 1.23.0
       mini-svg-data-uri: 1.4.4
       ora: 7.0.1
-      quicklink: 2.3.0(react-dom@18.2.0)(react@18.2.0)
+      quicklink: 2.3.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       sharp: 0.33.2
       svgo: 3.2.0
       table: 6.8.1
@@ -4587,6 +4588,7 @@ snapshots:
   '@types/node@20.11.6':
     dependencies:
       undici-types: 5.26.5
+    optional: true
 
   '@types/prop-types@15.7.11': {}
 
@@ -4620,6 +4622,7 @@ snapshots:
       '@typescript-eslint/visitor-keys': 6.19.1
       debug: 4.3.4
       eslint: 8.56.0
+    optionalDependencies:
       typescript: 5.3.3
     transitivePeerDependencies:
       - supports-color
@@ -4648,6 +4651,7 @@ snapshots:
       minimatch: 9.0.3
       semver: 7.5.4
       ts-api-utils: 1.0.3(typescript@5.3.3)
+    optionalDependencies:
       typescript: 5.3.3
     transitivePeerDependencies:
       - supports-color
@@ -4664,14 +4668,14 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@vitejs/plugin-react@4.2.1(vite@5.0.12)':
+  '@vitejs/plugin-react@4.2.1(vite@5.0.12(@types/node@20.11.6)(lightningcss@1.23.0)(terser@5.27.0))':
     dependencies:
       '@babel/core': 7.23.7
       '@babel/plugin-transform-react-jsx-self': 7.23.3(@babel/core@7.23.7)
       '@babel/plugin-transform-react-jsx-source': 7.23.3(@babel/core@7.23.7)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.0
-      vite: 5.0.12(@types/node@20.11.6)
+      vite: 5.0.12(@types/node@20.11.6)(lightningcss@1.23.0)(terser@5.27.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -4816,7 +4820,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  astro@4.2.4(@types/node@20.11.6)(typescript@5.3.3):
+  astro@4.2.4(@types/node@20.11.6)(lightningcss@1.23.0)(terser@5.27.0)(typescript@5.3.3):
     dependencies:
       '@astrojs/compiler': 2.5.1
       '@astrojs/internal-helpers': 0.2.1
@@ -4876,8 +4880,8 @@ snapshots:
       tsconfck: 3.0.1(typescript@5.3.3)
       unist-util-visit: 5.0.0
       vfile: 6.0.1
-      vite: 5.0.12(@types/node@20.11.6)
-      vitefu: 0.2.5(vite@5.0.12)
+      vite: 5.0.12(@types/node@20.11.6)(lightningcss@1.23.0)(terser@5.27.0)
+      vitefu: 0.2.5(vite@5.0.12(@types/node@20.11.6)(lightningcss@1.23.0)(terser@5.27.0))
       which-pm: 2.1.1
       yargs-parser: 21.1.1
       zod: 3.22.4
@@ -5154,7 +5158,7 @@ snapshots:
 
   cookie@0.6.0: {}
 
-  cosmiconfig-typescript-loader@5.0.0(@types/node@20.11.6)(cosmiconfig@8.3.6)(typescript@5.3.3):
+  cosmiconfig-typescript-loader@5.0.0(@types/node@20.11.6)(cosmiconfig@8.3.6(typescript@5.3.3))(typescript@5.3.3):
     dependencies:
       '@types/node': 20.11.6
       cosmiconfig: 8.3.6(typescript@5.3.3)
@@ -5168,6 +5172,7 @@ snapshots:
       js-yaml: 4.1.0
       parse-json: 5.2.0
       path-type: 4.0.0
+    optionalDependencies:
       typescript: 5.3.3
     optional: true
 
@@ -6800,8 +6805,9 @@ snapshots:
   postcss-load-config@4.0.2(postcss@8.4.33):
     dependencies:
       lilconfig: 3.0.0
-      postcss: 8.4.33
       yaml: 2.3.4
+    optionalDependencies:
+      postcss: 8.4.33
 
   postcss-nested@6.0.1(postcss@8.4.33):
     dependencies:
@@ -6860,6 +6866,7 @@ snapshots:
   prettier-plugin-tailwindcss@0.5.11(prettier-plugin-astro@0.13.0)(prettier@3.2.4):
     dependencies:
       prettier: 3.2.4
+    optionalDependencies:
       prettier-plugin-astro: 0.13.0
 
   prettier@3.2.4: {}
@@ -6896,7 +6903,7 @@ snapshots:
   queue-tick@1.0.1:
     optional: true
 
-  quicklink@2.3.0(react-dom@18.2.0)(react@18.2.0):
+  quicklink@2.3.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -7514,7 +7521,7 @@ snapshots:
   ts-interface-checker@0.1.13: {}
 
   tsconfck@3.0.1(typescript@5.3.3):
-    dependencies:
+    optionalDependencies:
       typescript: 5.3.3
 
   tslib@2.6.2: {}
@@ -7548,7 +7555,8 @@ snapshots:
 
   ultrahtml@1.5.2: {}
 
-  undici-types@5.26.5: {}
+  undici-types@5.26.5:
+    optional: true
 
   undici@5.28.2:
     dependencies:
@@ -7676,49 +7684,53 @@ snapshots:
       unist-util-stringify-position: 4.0.0
       vfile-message: 4.0.2
 
-  vite@5.0.12(@types/node@20.11.6):
+  vite@5.0.12(@types/node@20.11.6)(lightningcss@1.23.0)(terser@5.27.0):
     dependencies:
-      '@types/node': 20.11.6
       esbuild: 0.19.12
       postcss: 8.4.33
       rollup: 4.9.6
     optionalDependencies:
+      '@types/node': 20.11.6
       fsevents: 2.3.3
+      lightningcss: 1.23.0
+      terser: 5.27.0
 
-  vitefu@0.2.5(vite@5.0.12):
-    dependencies:
-      vite: 5.0.12(@types/node@20.11.6)
+  vitefu@0.2.5(vite@5.0.12(@types/node@20.11.6)(lightningcss@1.23.0)(terser@5.27.0)):
+    optionalDependencies:
+      vite: 5.0.12(@types/node@20.11.6)(lightningcss@1.23.0)(terser@5.27.0)
 
   volar-service-css@0.0.17(@volar/language-service@1.11.1):
     dependencies:
-      '@volar/language-service': 1.11.1
       vscode-css-languageservice: 6.2.12
       vscode-uri: 3.0.8
+    optionalDependencies:
+      '@volar/language-service': 1.11.1
 
   volar-service-emmet@0.0.17(@volar/language-service@1.11.1):
     dependencies:
-      '@volar/language-service': 1.11.1
       '@vscode/emmet-helper': 2.9.2
       volar-service-html: 0.0.17(@volar/language-service@1.11.1)
+    optionalDependencies:
+      '@volar/language-service': 1.11.1
 
   volar-service-html@0.0.17(@volar/language-service@1.11.1):
     dependencies:
-      '@volar/language-service': 1.11.1
       vscode-html-languageservice: 5.1.2
       vscode-uri: 3.0.8
+    optionalDependencies:
+      '@volar/language-service': 1.11.1
 
   volar-service-prettier@0.0.17(@volar/language-service@1.11.1)(prettier@3.2.4):
-    dependencies:
+    optionalDependencies:
       '@volar/language-service': 1.11.1
       prettier: 3.2.4
 
   volar-service-typescript-twoslash-queries@0.0.17(@volar/language-service@1.11.1):
-    dependencies:
+    optionalDependencies:
       '@volar/language-service': 1.11.1
 
   volar-service-typescript@0.0.17(@volar/language-service@1.11.1)(@volar/typescript@1.11.1):
     dependencies:
-      '@volar/language-service': 1.11.1
       '@volar/typescript': 1.11.1
       path-browserify: 1.0.1
       semver: 7.5.4
@@ -7726,6 +7738,8 @@ snapshots:
       vscode-languageserver-textdocument: 1.0.11
       vscode-nls: 5.2.0
       vscode-uri: 3.0.8
+    optionalDependencies:
+      '@volar/language-service': 1.11.1
 
   vscode-css-languageservice@6.2.12:
     dependencies:

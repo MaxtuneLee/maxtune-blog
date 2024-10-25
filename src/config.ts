@@ -1,6 +1,6 @@
 import type { Site, SocialObjects } from "./types";
 
-export const SITE: Site = {
+export const SITE: Record<string, string | boolean | number> & Site = {
   website: "https://mxte.cc/", // replace this with your deployed domain
   author: "maxtune",
   desc: "学智能科学与技术的前端开发者，研究机器视觉与 web 应用开发。",
@@ -9,6 +9,7 @@ export const SITE: Site = {
   lightAndDarkMode: true,
   postPerPage: 6,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
+  description: "学智能科学与技术的前端开发者，研究机器视觉与 web 应用开发。",
 };
 
 export const LOCALE = {
@@ -27,7 +28,7 @@ export const SOCIALS: SocialObjects = [
   {
     name: "Github",
     href: "https://github.com/maxtunelee",
-    linkTitle: ` Maxtune on Github`,
+    linkTitle: " Maxtune on Github",
     active: true,
   },
   {
@@ -51,7 +52,7 @@ export const SOCIALS: SocialObjects = [
   {
     name: "Mail",
     href: "mailto:max@xox.im",
-    linkTitle: `Send an email to Maxtune`,
+    linkTitle: "Send an email to Maxtune",
     active: true,
   },
   {

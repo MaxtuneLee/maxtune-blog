@@ -2,7 +2,6 @@
 title: "OffscreenCanvas — 用 Web Worker 来加速 Canvas 绘制"
 pubDatetime: 2024-05-01T11:47:18+08:00
 modDatetime: 2024-05-01T11:47:18+08:00
-featured: true
 categories:
   - "前端"
 tags:
