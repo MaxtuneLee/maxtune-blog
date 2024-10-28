@@ -58,8 +58,9 @@ module.exports = {
 				transparent: "transparent",
 			},
 			fontFamily: {
-				mono: ["Noto Sans SC", "JetBrains Mono", "monospace"],
-				// sans: ["Noto Sans SC", "sans-serif"],
+				// mono: ["Noto Sans SC", "JetBrains Mono", "monospace"],
+				mono: ["monospace"],
+				sans: ["sans-serif"],
 			},
 
 			typography: {
@@ -67,11 +68,11 @@ module.exports = {
 					css: {
 						pre: {
 							color: true,
-							fontFamily: "JetBrains Mono",
+							fontFamily: "monospace",
 						},
 						code: {
 							color: true,
-							fontFamily: "JetBrains Mono",
+							fontFamily: "monospace",
 						},
 					},
 				},
