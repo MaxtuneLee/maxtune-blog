@@ -59,8 +59,13 @@ module.exports = {
 			},
 			fontFamily: {
 				// mono: ["Noto Sans SC", "JetBrains Mono", "monospace"],
-				mono: ["monospace"],
-				sans: ["sans-serif"],
+				mono: ["IBM Plex Mono", "monospace"],
+				sans: ["Glow Sans SC Normal", "sans-serif"],
+			},
+
+			fontWeight: {
+				regular: 300,
+				medium: 400
 			},
 
 			typography: {
@@ -68,11 +73,13 @@ module.exports = {
 					css: {
 						pre: {
 							color: true,
-							fontFamily: "monospace",
+							fontFamily: {
+								mono: ["IBM Plex Mono", "monospace"],
+							},
 						},
 						code: {
 							color: true,
-							fontFamily: "monospace",
+							fontFamily: {mono:["IBM Plex Mono", "monospace"]},
 						},
 					},
 				},

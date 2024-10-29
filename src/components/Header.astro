@@ -131,7 +131,7 @@ const { activeNav } = Astro.props;
     @apply mx-auto flex max-w-3xl flex-col items-center justify-between sm:flex-row;
   }
   .top-nav-wrap {
-    transition: all 0.5s allow-discrete ease-out;
+    transition: all 0.25s ease-out;
     @apply relative grid w-full grid-rows-[0fr_0fr] overflow-hidden p-4 sm:grid-cols-2 sm:grid-rows-1 sm:items-center sm:py-8;
   }
   .logo {
@@ -146,7 +146,7 @@ const { activeNav } = Astro.props;
 
   nav {
     min-height: 0px;
-    @apply w-full flex-row place-items-center sm:justify-end sm:space-x-4 sm:py-0 md:place-items-end;
+    @apply w-full flex-row justify-center sm:justify-end sm:space-x-4 sm:py-0 md:justify-end;
   }
 
   #top-nav-wrap.open {
