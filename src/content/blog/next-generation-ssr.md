@@ -56,7 +56,7 @@ Jason Miller 2020 的时候提出了 Islands architecture 的概念，在之后 
 可恢复性指的是应用能够在不重新执行组件代码的情况下恢复组件的状态。和水合相比的区别是，水合需要完整执行所有的代码（就像上面所说的），所以是服务端执行一次、客户端再重新执行一次。而可恢复性则是服务端执行一半，然后暂停并且序列化这些状态传到客户端，然后客户端反序列化之后继续执行没执行完的部分，从而恢复目标的状态。就像下面图展示的一样：
 <video id="video" controls="" preload="auto" autoplay loop>
 
-<source id="mp4" src="/assets/images/hydration-and-resume.mp4" type="video/mp4">
+  <source id="mp4" src="/assets/images/hydration-and-resume.mp4" type="video/mp4">
 </videos>
 
 所以相比起水合来说要快得多，下面的图直观展示了两种方案的对比：
