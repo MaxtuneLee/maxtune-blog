@@ -1,7 +1,7 @@
 ---
 title: "Resumable - Next generation SSR ?"
-pubDatetime: 2024-12-10T03:41:45.176Z+8
-modDatetime: 2024-12-11T07:59:51.152Z+8
+pubDatetime: 2024-12-10T14:41:45.176Z
+modDatetime: 2024-12-13T16:00:43+08:00
 categories:
   - "前端"
 tags:
