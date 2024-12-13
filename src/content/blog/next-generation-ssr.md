@@ -1,15 +1,18 @@
 ---
 title: "Resumable - Next generation SSR ?"
-pubDatetime: 2024-12-10T03:41:45.176Z
-modDatetime: 2024-12-11T07:59:51.152Z
+pubDatetime: 2024-12-10T03:41:45.176Z+8
+modDatetime: 2024-12-11T07:59:51.152Z+8
 categories:
   - "前端"
 tags:
   - "前端框架"
   - "SSR"
   - "前端性能优化"
-description: "Qwik 是一个新的全栈框架，它的核心理念就是 Resumable，和目前框架常用的水合作用不同，Resumable 代表的是懒加载代码的方法，这会大大加快网页的 TTI 指标。"
+description: "你遇到过网页加载完但是点不了的情况吗？不妨体验一下 Qwik，它是一个新的全栈框架，它的核心理念就是 Resumable，和目前框架常用的水合作用不同，Resumable 代表的是懒加载代码的方法，这会大大加快网页的 TTI 指标。"
 ---
+
+> **摘要**
+> 本文介绍了 Qwik 框架及其核心理念 Resumable，探讨了 SSR 和水合作用的现有问题，并详细讲解了 Qwik 如何通过懒加载和状态恢复来优化页面性能。文章还对比了 React 和 Astro 的解决方案，并总结了 Qwik 的优缺点及其在实际应用中的表现。
 
 在参加 FEDAY 的时候看到嘉宾分享了一个叫做 Qwik 的框架，之前其实也有听说过，但是没去详细了解，毕竟现在前端框架出的太快了，我以为又是什么玩具框架。但是听完了他的分享之后感觉这个框架还是有点意思的，下面想来分享一下我对它的理解和以及目前存在的问题。
 
@@ -24,6 +27,8 @@ description: "Qwik 是一个新的全栈框架，它的核心理念就是 Resuma
 第三部分是执行整个页面的 JS 代码，具体来说，就是在就是在执行 React runtime 代码以及你写的网页的 js 代码；当这些都加载完了之后框架会在内存渲染 DOM 树，然后遍历 SSR 的 HTML 树进行匹配，但是这个时候不会给已经 SSR 的组件生成实体 DOM，而是将现有的逻辑绑定到对应的 HTML 元素上，这么听一下都感觉这个过程是十分耗性能的。
 
 ### 水合的问题
+
+> 网页看起来加载完了，为什么有时候输入框和按钮之类的元素还是无法点击呢？
 
 虽然 SSR 能够让用户快速地看到页面，提高 SEO 分数，但是这样也是有问题的。
 
@@ -57,7 +62,7 @@ Jason Miller 2020 的时候提出了 Islands architecture 的概念，在之后 
 
 可恢复性指的是应用能够在**不重新执行组件代码的情况下恢复组件的状态**。和水合相比的区别是，水合需要**完整执行**所有的代码（就像上面所说的），所以是服务端执行一次、客户端再重新执行一次。而可恢复性则是服务端执行一部分，然后暂停并且序列化这些状态传到客户端，然后客户端反序列化之后**继续执行**没执行完的部分，从而恢复目标的状态。就像下面图展示的一样：
 
-<video id="video" src="/assets/images/hydration-and-resume.mp4" preload="auto" autoplay loop></video>
+<video id="video" src="/assets/images/hydration-and-resume.mp4" preload="auto" autoplay loop playsinline webkit-playsinline></video>
 
 所以相比起水合来说要快得多，下面的图直观展示了两种方案的对比：
 ![hydration vs resumable](/assets/images/hydration-resumable.png)
