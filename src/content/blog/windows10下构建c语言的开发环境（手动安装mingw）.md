@@ -27,16 +27,16 @@ threads:posix
 
 exception:seh
 
-[![](/assets/images/1624029377-image.png)](https://mxte.cc/?attachment_id=86)
+[![](https://maxtuneblog.oss-cn-shenzhen.aliyuncs.com/old/assets/images/1624029377-image.png)](https://mxte.cc/?attachment_id=86)
 
 然后开始在线安装，速度取决于你家的网速
 
-[![](/assets/images/1624029622-image.png)](https://mxte.cc/?attachment_id=87)
+[![](https://maxtuneblog.oss-cn-shenzhen.aliyuncs.com/old/assets/images/1624029622-image.png)](https://mxte.cc/?attachment_id=87)
 
 安装完成之后打开系统设置添加环境变量，地址是mingw地址/bin,重启电脑
 
 打开powershell，输入gcc -v如果显示版本信息即安装开发环境成功
 
-[![](/assets/images/1626856094-image.png)](https://mxte.cc/?attachment_id=95)
+[![](https://maxtuneblog.oss-cn-shenzhen.aliyuncs.com/old/assets/images/1626856094-image.png)](https://mxte.cc/?attachment_id=95)
 
 手动安装mingw比较麻烦，如果遇到无法在线安装的小伙伴可以百度一下其它教程

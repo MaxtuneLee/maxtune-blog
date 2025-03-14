@@ -20,7 +20,7 @@ description: "你遇到过网页加载完但是点不了的情况吗？不妨体
 
 目前前端生态中 SSR 已经占据了很重要的地位，许多框架都推出了自己的 SSR 框架，而 SSR 相比于 CSR 应用大大地提升了应用的 FCP 和 TTI 指标，但是 SSR 也有它的问题。从服务端渲染好的 HTML 只是一个静态网页，用户是无法进行交互的，所以在浏览器端中需要将服务器渲染的 HTML 和本地的框架 runtime 进行结合，那就是**水合作用**。
 水合作用的一般过程如下图所示：
-![alt text](/assets/images/hydration.png)
+![alt text](https://maxtuneblog.oss-cn-shenzhen.aliyuncs.com/old/assets/images/hydration.png)
 
 可以看到第一步获取 HTML 是非常快的，但是第二步需要将整个页面的 JS 代码都给拉下来，如果在网络不太好的情况下，这个步骤就比较耗时，所以这个时候虽然用户已经可以看到网页长什么样子了，但是点击上面的元素或者进行别的交互是没有反应的。
 
@@ -43,7 +43,7 @@ description: "你遇到过网页加载完但是点不了的情况吗？不妨体
 ### React
 
 React 18 使用了**并发**的新架构，这个架构可以让 React 在渲染的时候可以中断，带来了一个新的组件 `<suspense>`，如果经常使用 next.js 的同学可能会比较常用，它可以将我们的程序分割成更小的**独立单元**，这样的话就不需要在一开始水合之前把整个页面的 JS 都拉下来执行一遍，而是可以**手动指定组件的边界**，分区域加载（你也可以理解成手动的 `code spliting`）。这样网页慢的部分就不会影响快的部分，从而提升 TTI。同时还更新了 Streaming 的能力，每个部分的组件都可以在准备好了之后立刻流式发送 HTML，然后执行 JS，然后水合，**不会互相阻塞**。
-![alt text](/assets/images/react-hydrate.png)
+![alt text](https://maxtuneblog.oss-cn-shenzhen.aliyuncs.com/old/assets/images/react-hydrate.png)
 
 ### Astro
 
@@ -62,10 +62,10 @@ Jason Miller 2020 的时候提出了 Islands architecture 的概念，在之后 
 
 可恢复性指的是应用能够在**不重新执行组件代码的情况下恢复组件的状态**。和水合相比的区别是，水合需要**完整执行**所有的代码（就像上面所说的），所以是服务端执行一次、客户端再重新执行一次。而可恢复性则是服务端执行一部分，然后暂停并且序列化这些状态传到客户端，然后客户端反序列化之后**继续执行**没执行完的部分，从而恢复目标的状态。就像下面图展示的一样：
 
-<video id="video" src="/assets/images/hydration-and-resume.mp4" preload="auto" autoplay loop playsinline webkit-playsinline></video>
+<video id="video" src="https://maxtuneblog.oss-cn-shenzhen.aliyuncs.com/old/assets/images/hydration-and-resume.mp4" preload="auto" autoplay loop playsinline webkit-playsinline></video>
 
 所以相比起水合来说要快得多，下面的图直观展示了两种方案的对比：
-![hydration vs resumable](/assets/images/hydration-resumable.png)
+![hydration vs resumable](https://maxtuneblog.oss-cn-shenzhen.aliyuncs.com/old/assets/images/hydration-resumable.png)
 用户在拿到 html 后直接就可以进行交互，而之后的 js 是按需加载的，大大提高了 TTI 指标。
 
 Qwik 团队从水合需要做的三件事，一一解决来实现了这样的能力：
@@ -185,7 +185,7 @@ Qwik 的全新设计给它带来了很多的优点，同时也带来了一些问
 ### HTML 冗余问题
 
 在目前的 Qwik 版本中，HTML 存储了大量框架使用的序列化信息，让 HTML 体积变得更大，而且不好阅读：
-![qwik ssr output](/assets/images/qwik-ssr-output.png)
+![qwik ssr output](https://maxtuneblog.oss-cn-shenzhen.aliyuncs.com/old/assets/images/qwik-ssr-output.png)
 听团队说在新的版本中已经解决这个问题，十分期待，我也会继续关注。（builder.io 网站中已经没有了这些标签）
 
 ## 总结

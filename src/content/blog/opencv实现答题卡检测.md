@@ -85,7 +85,7 @@ cv2.waitKey(0)
 
 经过处理后展示图像得
 
-[![](/assets/images/1646311202-D__study_com_Opencv_Document_opencv_Pasted-image-20220204170547.png)](https://mxte.cc/?attachment_id=223)
+[![](https://maxtuneblog.oss-cn-shenzhen.aliyuncs.com/old/assets/images/1646311202-D__study_com_Opencv_Document_opencv_Pasted-image-20220204170547.png)](https://mxte.cc/?attachment_id=223)
 
 ## 提取图片轮廓
 
@@ -98,7 +98,7 @@ cv2.imshow('contours_img',contours_img)
 cv2.waitKey(0)
 ```
 
-[![](/assets/images/1646311211-D__study_com_Opencv_Document_opencv_Pasted-image-20220206104558.png)](https://mxte.cc/?attachment_id=224)
+[![](https://maxtuneblog.oss-cn-shenzhen.aliyuncs.com/old/assets/images/1646311211-D__study_com_Opencv_Document_opencv_Pasted-image-20220206104558.png)](https://mxte.cc/?attachment_id=224)
 
 对边缘检测后的图片提取轮廓，按面积从大到小排序，对提取的轮廓使用多边形近似，如果多边形近似为四边形，说明是答题卡
 
@@ -125,7 +125,7 @@ cv2.waitKey(0)
 
 图片摆正得
 
-[![](/assets/images/1646311216-D__study_com_Opencv_Document_opencv_Pasted-image-20220206113500.png)](https://mxte.cc/?attachment_id=225)
+[![](https://maxtuneblog.oss-cn-shenzhen.aliyuncs.com/old/assets/images/1646311216-D__study_com_Opencv_Document_opencv_Pasted-image-20220206113500.png)](https://mxte.cc/?attachment_id=225)
 
 ## 答题卡圆形轮廓检测并排序
 
@@ -151,11 +151,11 @@ Ostu是一种阈值选择的算法，在面对色彩分布不均匀的图像时�
 Ostu的思想很简单，属于暴力寻优的一种，分别计算选用不同灰度级作为阈值时的前景、背景、整体方差。当方差最大时，此时的阈值最好。  
 处理后得到图片如
 
-[![](/assets/images/1646311223-D__study_com_Opencv_Document_opencv_Pasted-image-20220206143055.png)](https://mxte.cc/?attachment_id=226)
+[![](https://maxtuneblog.oss-cn-shenzhen.aliyuncs.com/old/assets/images/1646311223-D__study_com_Opencv_Document_opencv_Pasted-image-20220206143055.png)](https://mxte.cc/?attachment_id=226)
 
 画出每一个轮廓后得
 
-[![](/assets/images/1646311227-D__study_com_Opencv_Document_opencv_Pasted-image-20220206143118.png)](https://mxte.cc/?attachment_id=227)
+[![](https://maxtuneblog.oss-cn-shenzhen.aliyuncs.com/old/assets/images/1646311227-D__study_com_Opencv_Document_opencv_Pasted-image-20220206143118.png)](https://mxte.cc/?attachment_id=227)
 
 这时候我们需要筛选掉我们不要得轮廓，然后得出答题卡上圆形得答题区
 
@@ -176,7 +176,7 @@ for c in cnts:
 遍历所有的轮廓，选出符合条件的圆形轮廓，放入questionCnt列表  
 画出来得到如图
 
-[![](/assets/images/1646311233-D__study_com_Opencv_Document_opencv_Pasted-image-20220206143305.png)](https://mxte.cc/?attachment_id=228)
+[![](https://maxtuneblog.oss-cn-shenzhen.aliyuncs.com/old/assets/images/1646311233-D__study_com_Opencv_Document_opencv_Pasted-image-20220206143305.png)](https://mxte.cc/?attachment_id=228)
 
 ## 检测每题标记涂黑的答案
 
@@ -209,9 +209,9 @@ for (j, c) in enumerate(cnts):
 遍历每行答案，提取掩膜选定区域的图像（也就是每个答题区）数里面不是0的像素的个数，得出非零像素最多的那个圆圈就是填涂的地方，把他放在bubbled里  
 第一行前两个圆圈的示意图
 
-[![](/assets/images/1646311259-D__study_com_Opencv_Document_opencv_Pasted-image-20220207103227.png)](https://mxte.cc/?attachment_id=230)
+[![](https://maxtuneblog.oss-cn-shenzhen.aliyuncs.com/old/assets/images/1646311259-D__study_com_Opencv_Document_opencv_Pasted-image-20220207103227.png)](https://mxte.cc/?attachment_id=230)
 
-[![](/assets/images/1646311263-D__study_com_Opencv_Document_opencv_Pasted-image-20220207103235.png)](https://mxte.cc/?attachment_id=231)
+[![](https://maxtuneblog.oss-cn-shenzhen.aliyuncs.com/old/assets/images/1646311263-D__study_com_Opencv_Document_opencv_Pasted-image-20220207103235.png)](https://mxte.cc/?attachment_id=231)
 
 ```py
     color = (0, 0, 255)

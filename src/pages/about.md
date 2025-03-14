@@ -34,7 +34,7 @@ title: "关于我"
 喜欢音乐就离不开音游，不算资深的音游人，主要是音游比较多歌曲有术力口、核之类的爱听，平时会玩 Muse Dash，现在能打 9 级左右的歌，乌蒙 DX Rank 1w3，中二 9，冰与火之歌，屁股肉，如果你也喜欢音游速速与我一起出勤 🙌 。
 
 <div>
-  <img src="/assets/about.png" class="sm:w-1/2 mx-auto" alt="illustration">
+  <img src="https://maxtuneblog.oss-cn-shenzhen.aliyuncs.com/old/assets/images/about.png" class="sm:w-1/2 mx-auto" alt="illustration">
 </div>
 
 ## 技术栈

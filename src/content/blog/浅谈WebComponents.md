@@ -67,13 +67,13 @@ customElements.define("word-count", WordCount, { extends: "p" });
 ### Shadow DOM
 
 Shadow DOM 允许我们将隐藏的 DOM 树附加到常规的 DOM 树元素上。那么什么叫作隐藏的 DOM 树呢。
-![alt text](/assets/images/shadowdom.png)
+![alt text](https://maxtuneblog.oss-cn-shenzhen.aliyuncs.com/old/assets/images/shadowdom.png)
 可以通过上图简单的理解。Shadow DOM 的主要作用就是**封装和隔离**，它是一个基于现有上下文的 封闭的 DOM 结构，它以 shadow root 节点为起始根节点，在这个根节点的下方，可以是任意元素，和普通的 DOM 元素一样，但是这棵子树不在主 DOM 树中——即影子 DOM 是一种不属于主 DOM 树的独立的结构，所以 Shadow DOM 内部的元素始终不会影响到它外部的元素（除了`:focus-within`)，这就为封装提供了便利！
 
 > 类似 iFrame，但显然 Shadow DOM 要轻量化多了
 
 Shadow DOM 都不是一个新事物，在过去的很长一段时间里，浏览器用它来封装一些元素的内部结构，以一个有着默认播放控制按钮的`<video>`元素为例，我们所能看到的只是一个`<video>`标签，实际上，在它的 Shadow DOM 中，包含来一系列的按钮和其他控制器。
-![alt text](/assets/images/videoshadowdom.png)
+![alt text](https://maxtuneblog.oss-cn-shenzhen.aliyuncs.com/old/assets/images/videoshadowdom.png)
 
 ### templates and slots
 
@@ -87,7 +87,7 @@ Web Component 作为一个浏览器原生的组件化支持，给它带来了得
 
 现在前端领域里面已经有数不清的前端框架了，更是产生了下面的梗图
 
-![前端大手子](/assets/images/IMG_428820240303-224643.png)
+![前端大手子](https://maxtuneblog.oss-cn-shenzhen.aliyuncs.com/old/assets/images/IMG_428820240303-224643.png)
 
 **框架 API 差异巨大，学习与应用成本高。** 虽然框架在实现的某些概念是相同的，但是由于实现方式不一样，导致 api 区别非常大。比如说`Signal`在 Vue 和在 Solid 上的用法差异就是比较巨大的，Solid 作者在写区别的时候也特意强调了受到 Vue 设计的影响非常小，并且是特意让属性只读而非像响应式通常的做法，相反 Vue 那边宣称自己引领了框架的`Signal`设计（乐）。由此可见，框架的差异必然会产生了许多前端领域的派系纷争，最经典的就是 React 和 Vue 作者及用户 X 对喷，Angular 用户岁月静好。
 
@@ -116,7 +116,7 @@ Web Component 作为一个浏览器原生的组件化支持，给它带来了得
 确实，Web Component 作为一套 native 的技术方案，它的 api 设计十分地原始和底层，这使得你需要用最基本的 api 去操作和更新 DOM，连 JQuery 都不如。
 
 所以我们一般都使用基于 Web Component 的框架去编写 Web Component，比如说 [Lit](https://lit.dev/)、或者是腾讯家的 [OMI](https://omi.cdn-go.cn/home/latest/zh/)……
-![alt text](/assets/images/lit.png)
+![alt text](https://maxtuneblog.oss-cn-shenzhen.aliyuncs.com/old/assets/images/lit.png)
 这些框架给 Web Component 带来了更加现代化的全新体验，包含了更方便的定义自定义组件、Reactive 属性、Event Handler，以及更高阶的 Server Render 特性。
 
 而且即使使用框架开发的 WebComponent 依然是跨框架的，毕竟本质还是一个 Web Component。
@@ -125,7 +125,7 @@ Web Component 作为一个浏览器原生的组件化支持，给它带来了得
 
 也许你没留意，但是实际上 Web Component 已经遍布了我们的日常体验。
 
-![alt text](/assets/images/youtubewebcomponent.png)
+![alt text](https://maxtuneblog.oss-cn-shenzhen.aliyuncs.com/old/assets/images/youtubewebcomponent.png)
 
 上面是 youtube 中 web component，google 在很早就在全站用上了 Web Cmponents，并且开源了自己播放器组件 [GitHub - GoogleWebComponents/google-youtube: YouTube video playback web component](https://github.com/GoogleWebComponents/google-youtube) 此外 google 开源的 Web Components 还是很多的，[Google Web Components · GitHub](https://github.com/GoogleWebComponents) ，包括地图、drive、日历等等。
 
