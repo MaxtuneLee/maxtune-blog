@@ -1,6 +1,10 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+# Run the modDatetime update script first
+node scripts/update-mod-datetime.js
+
+# Run lint-staged as before
 npx lint-staged
 
 
