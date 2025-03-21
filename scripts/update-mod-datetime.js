@@ -4,7 +4,16 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 
 // Get current date and time in ISO format with timezone
-const currentDate = new Date().toISOString().replace(/\.\d{3}Z$/, '+00:00');
+const currentDate = new Date().toLocaleString('en-GB', { 
+    timeZone: 'Asia/Shanghai',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: false
+}).replace(/(\d{2})\/(\d{2})\/(\d{4}), (\d{2}:\d{2}:\d{2})/, '$3-$2-$1T$4+08:00');
 
 try {
   // Get list of staged markdown files in the content/blog directory
