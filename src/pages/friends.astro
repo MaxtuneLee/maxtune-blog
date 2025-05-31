@@ -3,10 +3,42 @@ import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import Main from "@layouts/Main.astro";
+import friends from "@content/friend.json";
+import { Plus } from "@lucide/astro";
 ---
 
 <Layout>
   <Header activeNav="friends" />
-  <Main pageTitle="朋友们">🚧️ 施工中</Main>
-  <Footer />
+  <Main pageTitle="朋友们">
+    <ul class="grid-col-1 grid gap-6 p-4 md:grid-cols-2 lg:grid-cols-3">
+      {
+        friends.map(friend => (
+          <li class="cursor-pointer p-6 transition-all duration-300 hover:bg-skin-accent/10">
+            <a
+              href={friend.url}
+              class=" inline-block text-lg font-bold text-skin-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
+            >
+              {friend.name}
+            </a>
+            <p class="opacity-80">{friend.bio}</p>
+          </li>
+        ))
+      }
+      <li
+        class="flex cursor-pointer items-center gap-4 p-6 transition-all duration-300 hover:bg-skin-accent/10"
+      >
+        <Plus stroke-width={2} class="text-skin-accent" />
+        <a
+          href="mailto:max@xox.im"
+          class="inline-block text-lg font-bold text-skin-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
+        >
+          真的不来交个朋友吗？
+          <p class="text-base font-[300] text-black opacity-80">
+            点击添加你的友情链接
+          </p>
+        </a>
+      </li>
+    </ul>
+    <Footer />
+  </Main>
 </Layout>

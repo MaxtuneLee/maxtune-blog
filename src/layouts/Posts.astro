@@ -24,8 +24,8 @@ const { currentPage, totalPages, paginatedPosts } = Astro.props;
       {
         paginatedPosts
           .filter(data => !data.data.draft)
-          .map(({ data, slug }) => (
-            <Card href={`/posts/${slug}`} frontmatter={data} />
+          .map(({ data, id }) => (
+            <Card href={`/posts/${id}`} frontmatter={data} />
           ))
       }
     </ul>
