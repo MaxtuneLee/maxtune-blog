@@ -10,24 +10,49 @@ import { Plus } from "@lucide/astro";
 <Layout>
   <Header activeNav="friends" />
   <Main pageTitle="朋友们">
-    <ul class="grid-col-1 grid gap-6 pb-4 md:grid-cols-2 lg:grid-cols-3">
+    <ul class="grid-col-1 grid gap-6 pb-4 md:grid-cols-2">
       {
         friends.map(friend => (
-          <li class="cursor-pointer p-6 transition-all duration-300 hover:bg-skin-accent/10">
-            <a
-              href={friend.url}
-              class=" inline-block text-lg font-bold text-skin-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
-            >
+          // <a href={friend.url} target="_blank" rel="noopener noreferrer">
+          <li class="relative cursor-pointer p-6 transition-all duration-300 hover:bg-skin-accent/10">
+            <img
+              src={friend.avatar}
+              alt={friend.name}
+              class="mb-2 h-12 w-12 rounded-full"
+            />
+            <p class=" inline-block text-lg font-bold text-skin-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0">
               {friend.name}
-            </a>
+            </p>
             <p class="opacity-80">{friend.bio}</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="transparent"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right absolute right-4 top-4 h-6 w-6 text-skin-accent"
+            >
+              <>
+                <path d="M7 7h10v10" fill="transparent" />
+                <path d="M7 17 17 7" />
+              </>
+            </svg>
           </li>
+          // </a>
         ))
       }
       <li
-        class="flex cursor-pointer items-center gap-4 p-6 transition-all duration-300 hover:bg-skin-accent/10 bg-skin-accent/5"
+        class="flex cursor-pointer flex-col justify-center bg-skin-accent/5 p-6 transition-all duration-300 hover:bg-skin-accent/10"
       >
-        <Plus stroke-width={2} class="text-skin-accent" />
+        <div
+          class="mb-2 flex h-12 w-12 items-center justify-center rounded-full bg-skin-accent/10"
+        >
+          <Plus stroke-width={2} class="text-skin-accent" />
+        </div>
         <a
           href="mailto:max@xox.im"
           class="inline-block text-lg font-bold text-skin-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
