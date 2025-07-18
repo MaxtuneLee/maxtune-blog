@@ -15,11 +15,31 @@ import { Plus } from "@lucide/astro";
         friends.map(friend => (
           // <a href={friend.url} target="_blank" rel="noopener noreferrer">
           <li class="relative cursor-pointer p-6 transition-all duration-300 hover:bg-skin-accent/10">
-            <img
-              src={friend.avatar}
-              alt={friend.name}
-              class="mb-2 h-12 w-12 rounded-full"
-            />
+            <div class="mb-2 flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-skin-accent/10 shadow-inner">
+              {friend.avatar ? (
+                <img
+                  src={friend.avatar}
+                  alt={friend.name}
+                  class="h-full w-full rounded-full object-cover shadow-inner"
+                />
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="text-skin-accent/60"
+                >
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg>
+              )}
+            </div>
             <p class=" inline-block text-lg font-bold text-skin-accent decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0">
               {friend.name}
             </p>

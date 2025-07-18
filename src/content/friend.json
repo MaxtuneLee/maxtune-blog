@@ -4,5 +4,29 @@
     "url": "https://hadongzhu.com",
     "bio": "不是轨道，是旷野",
     "avatar": "https://assets.hadongzhu.com/avatar.webp"
+  },
+  {
+    "name": "Lakphy",
+    "url": "https://lakphy.me",
+    "avatar": "https://lakphy.me/avatar.webp",
+    "bio": "技术浪客，热爱 Web 与 AI，折腾软硬件不停歇，在繁忙中持续点燃热情。"
+  },
+  {
+    "name": "风业",
+    "url": "https://fengye404.top",
+    "avatar": "https://q1.qlogo.cn/g?b=qq&nk=1129126684&s=640",
+    "bio": "Java & Backend developer"
+  },
+  {
+    "name": "Frank Cheng",
+    "url": "https://frankcheng.top",
+    "avatar": "https://frankcheng.top/img/favicon_1.jpg",
+    "bio": "显著的是数据，平淡的才是人生"
+  },
+  {
+    "name": "love98",
+    "url": "https://blog.love98.net",
+    "avatar": "https://blog.love98.net/upload/SqLogo_transparent.png",
+    "bio": "全栈大师"
   }
 ]
